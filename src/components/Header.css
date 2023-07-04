@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css?family=Catamaran:400,700|Grand+Hotel");
+.header {
+  height: 100vh;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(../images/first.jpg) center/cover no-repeat fixed;
+  position: relative;
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3 {
+  color: var(--clr-mint);
+  text-transform: capitalize;
+  margin: 0.75rem;
+  line-height: 1.25;
+  letter-spacing: var(--spacing);
+}
+h2,
+h1 {
+  font-family: var(--ff-primary);
+  font-weight: 700;
+  animation: slidesfromleft 5s ease-in-out 1;
+}
+h3 {
+  font-family: var(--ff-secondary);
+  animation: slidesfromright 5s ease-in-out 1;
+}
+.banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 50rem;
+}
+.banner-btn {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: var(--clr-mint);
+  padding: 1rem 1.75rem;
+  background-color: var(--clr-navy);
+  display: inline-block;
+  text-align: center;
+  letter-spacing: var(--spacing);
+  font-weight: 700;
+  margin-top: 0.75rem;
+  transition: var(--transition);
+  border: none;
+  outline: 0.125rem solid var(--clr-navy);
+  outline-offset: 0.25rem;
+  animation: show 5s linear;
+}
+.banner-btn:hover {
+  background: transparent;
+
+  color: var(--clr-teal);
+}
+.hover {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.scroll-icon {
+  width: 30px;
+  height: 50px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  outline: 2px solid rgb(105, 127, 255);
+  box-shadow: 0px 0px 10px rgb(105, 127, 255);
+  position: relative;
+}
+.scroll {
+  width: 5px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: rgb(105, 127, 255);
+  box-shadow: 0px 0px 10px rgb(105, 127, 255);
+  animation: scroll_4013 2s linear infinite;
+  transform: translateY(40%);
+}
+.scroll-icon:after {
+  /* content: "scroll"; */
+  position: absolute;
+  top: 140%;
+  color: whitesmoke;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+@keyframes scroll_4013 {
+  0% {
+    transform: translateY(40%);
+  }
+
+  50% {
+    transform: translateY(90%);
+  }
+}
+@keyframes show {
+  0% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.6);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes slidesfromleft {
+  1% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(200px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateX(-50px);
+    opacity: 0.75;
+  }
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slidesfromright {
+  1% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-200px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateX(50px);
+    opacity: 0.75;
+  }
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.content-divider {
+  height: 0.75rem;
+  background: linear-gradient(
+    to left,
+    var(--clr-navy),
+    var(--clr-grey),
+    var(--clr-teal),
+    var(--clr-mint),
+    var(--clr-mint),
+    var(--clr-teal),
+    var(--clr-grey),
+    var(--clr-navy)
+  );
+  margin-bottom: 3rem;
+}
+@media screen and (max-width: 768px) {
+  .banner h1 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1;
+  }
+  .banner h2 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+  }
+  .banner h3 {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1;
+  }
+  .banner {
+    max-width: 500px;
+  }
+  .banner-btn {
+    font-size: 15px;
+    padding: 0.75rem 1.25rem;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .banner h1 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+  }
+  .banner h2 {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1;
+  }
+  .banner h3 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+  }
+  .banner {
+    max-width: 350px;
+  }
+  .banner-btn {
+    font-size: 12px;
+    padding: 0.5rem 0.8rem;
+    font-weight: 400;
+  }
+}

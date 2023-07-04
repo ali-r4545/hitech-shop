@@ -1,0 +1,112 @@
+.orders-info {
+  display: flex;
+  justify-content: space-around;
+  height: 11rem;
+  margin: 0 auto;
+  align-items: center;
+  margin-top: 3rem;
+  background-color: rgb(215, 215, 215);
+  width: 40rem;
+  margin-bottom: -2rem;
+  font-size: 15px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: var(--transition);
+}
+.orders-info:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+.orders-img {
+  height: 10rem;
+  width: 10rem;
+  max-width: 13rem;
+  object-fit: contain;
+}
+
+.product-in {
+  max-width: 13rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.shipping-address {
+  height: 18rem;
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-top: 3rem;
+  background-color: rgb(215, 215, 215);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: var(--transition);
+  margin-bottom: 2rem;
+}
+.shipping-address:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+@media screen and (max-width: 992px) {
+  .orders-info {
+    font-size: 13px;
+    max-width: 35rem;
+    height: 10rem;
+  }
+  .orders-img {
+    height: 6rem;
+    width: 10rem;
+    max-width: 8.5rem;
+  }
+  .product-in {
+    max-width: 9rem;
+  }
+  .shipping-address {
+    height: 14rem;
+    width: 13rem;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .orders-info {
+    font-size: 10px;
+    max-width: 30rem;
+    height: 8rem;
+  }
+  .orders-img {
+    height: 5rem;
+    width: 9rem;
+    max-width: 10rem;
+  }
+  .product-in {
+    max-width: 8rem;
+  }
+  .shipping-address {
+    height: 13rem;
+    width: 12rem;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .orders-info {
+    font-size: 8px;
+    max-width: 25rem;
+    height: 6rem;
+  }
+  .orders-img {
+    height: 4rem;
+    width: 8rem;
+    max-width: 8rem;
+  }
+  .product-in {
+    max-width: 6rem;
+    line-height: 8px;
+  }
+  .shipping-address {
+    height: 11.5rem;
+    width: 10rem;
+    font-size: 8px;
+  }
+}

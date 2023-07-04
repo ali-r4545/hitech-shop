@@ -1,0 +1,237 @@
+.address-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  background: url(../images/first.jpg) center/cover no-repeat fixed;
+}
+.forms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.37);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(20px);
+  height: 70%;
+  border-radius: 1.5rem;
+  transition: var(--transition);
+}
+
+.inputBox {
+  position: relative;
+  width: 30rem;
+}
+.single-form {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  color: #23242a;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  z-index: 10;
+}
+.inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 20px 10px 10px;
+  font-size: 1em;
+  color: #8f8f8f;
+  letter-spacing: 00.05em;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.single-form:valid ~ span,
+.single-form:focus ~ span {
+  color: #45f3ff;
+  transform: translateX(-10px) translateY(-34px);
+  font-size: 0, 75em;
+}
+.inputBox i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #45f3ff;
+  border-radius: 4px;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+}
+
+.single-form:focus ~ i,
+.single-form:valid ~ i {
+  height: 44px;
+}
+
+.cta {
+  position: relative;
+  margin: auto;
+  padding: 10px 16px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+}
+
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: #b1dae7;
+  width: 45px;
+  height: 55px;
+  transition: all 0.3s ease;
+}
+
+.cta span {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--clr-navy);
+}
+
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: var(--clr-teal);
+  stroke-width: 3;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+  width: 100%;
+  background: #b1dae7;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active {
+  transform: scale(0.95);
+}
+@media screen and (max-width: 992px) {
+  .inputBox {
+    width: 25rem;
+    font-size: 15px;
+  }
+  .single-form {
+    padding: 18px 8px 8px;
+  }
+  .inputBox span {
+    padding: 18px 8px 8px;
+  }
+  .single-form:focus ~ i,
+  .single-form:valid ~ i {
+    height: 35px;
+  }
+
+  .single-form:valid ~ span,
+  .single-form:focus ~ span {
+    transform: translateX(-8px) translateY(-25px);
+  }
+  .forms {
+    height: 60vh;
+  }
+  .cta {
+    padding: 8px 12px;
+  }
+  .cta span {
+    font-size: 18px;
+  }
+  .cta:before {
+    width: 30px;
+    height: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .inputBox {
+    width: 20rem;
+    font-size: 12px;
+  }
+  .single-form {
+    padding: 16px 6px 6px;
+  }
+  .inputBox span {
+    padding: 16px 6px 6px;
+  }
+  .single-form:focus ~ i,
+  .single-form:valid ~ i {
+    height: 25px;
+  }
+  .single-form:valid ~ span,
+  .single-form:focus ~ span {
+    transform: translateX(-6px) translateY(-20px);
+  }
+  .forms {
+    height: 55vh;
+  }
+  .cta {
+    padding: 5px 13px;
+  }
+  .cta span {
+    font-size: 15px;
+  }
+  .cta:before {
+    width: 25px;
+    height: 35px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .inputBox {
+    width: 13rem;
+    font-size: 10px;
+  }
+  .single-form {
+    padding: 14px 4px 4px;
+  }
+  .inputBox span {
+    padding: 14px 4px 4px;
+  }
+  .single-form:focus ~ i,
+  .single-form:valid ~ i {
+    height: 22.6px;
+  }
+  .single-form:valid ~ span,
+  .single-form:focus ~ span {
+    transform: translateX(-5px) translateY(-18px);
+  }
+  .forms {
+    height: 50vh;
+  }
+  .cta {
+    padding: 3px 11px;
+  }
+  .cta span {
+    font-size: 12px;
+  }
+  .cta:before {
+    width: 20px;
+    height: 30px;
+  }
+}

@@ -1,0 +1,57 @@
+.right-nav-list-item {
+  margin-bottom: 5px;
+  background-color: var(--clr-mint);
+  transition: var(--transition);
+}
+.right-nav-list-item:hover {
+  background-color: var(--clr-navy);
+  color: var(--clr-mint);
+}
+.gmail {
+  color: white;
+  cursor: pointer;
+}
+@media screen and (max-width: 992px) {
+  .right-nav-list-item {
+    width: 20rem;
+  }
+  .right-nav-container {
+    max-width: 22rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .right-nav-list-item {
+    width: 18rem;
+    font-size: 15px;
+  }
+  .right-nav-container {
+    max-width: 20rem;
+  }
+  .right-nav-header {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .right-nav-list-item {
+    width: 16rem;
+    font-size: 13px;
+  }
+  .right-nav-container {
+    max-width: 18rem;
+  }
+  .right-nav-header {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .right-nav-list-item {
+    width: 14rem;
+    font-size: 11px;
+  }
+  .right-nav-container {
+    max-width: 16rem;
+  }
+  .right-nav-header {
+    font-size: 13px;
+  }
+}

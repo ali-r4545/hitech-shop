@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css?family=Catamaran:400,700|Grand+Hotel");
+:root {
+  --clr-navy: #002b5b;
+  --clr-grey: #2b4865;
+  --clr-teal: #256d85;
+  --clr-mint: #8fe3cf;
+  --radius: 6px;
+  --transition: all 0.3s linear;
+  --ff-primary: "Catamaran", sans-serif;
+  --ff-secondary: "Grand Hotel", cursive;
+  --spacing: 0.25rem;
+}
+.App {
+  text-align: center;
+}

@@ -1,0 +1,276 @@
+.contain {
+  height: 100vh;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(../images/second.jpg) center/cover no-repeat fixed;
+  position: relative;
+}
+.search-bar {
+  position: absolute;
+  top: 10%;
+  left: 1.5%;
+  height: 40rem;
+}
+
+.profile-contain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(255, 255, 255, 0.37);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(20px);
+  width: 35rem;
+  height: 70vh;
+  border-radius: 30px;
+}
+
+.done-button {
+  position: relative;
+  padding: 12px 25px;
+  font-size: 1.5rem;
+  color: var(--clr-mint);
+  border-radius: 4px;
+  text-shadow: 0 0 15px #1e9bff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  transition: 0.5s;
+  z-index: 1;
+  margin-top: 2rem;
+}
+.done-button:hover {
+  color: #fff;
+  border: 2px solid rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0px #1e9bff;
+}
+.done-button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1e9bff;
+  z-index: -1;
+  transform: scale(0);
+  transition: 0.5s;
+}
+.done-button:hover::before {
+  transform: scale(1);
+  transition-delay: 0.5s;
+  box-shadow: 0 0 10px #1e9bff, 0 0 30px #1e9bff, 0 0 60px #1e9bff;
+}
+.done-button span {
+  position: absolute;
+  background: #1e9bff;
+  pointer-events: none;
+  border-radius: 2px;
+  box-shadow: 0 0 10px #1e9bff, 0 0 20px #1e9bff, 0 0 30px #1e9bff,
+    0 0 50px #1e9bff, 0 0 100px #1e9bff;
+  transition: 0.5s ease-in-out;
+  transition-delay: 0.25s;
+}
+.done-button:hover span {
+  opacity: 0;
+  transition-delay: 0s;
+}
+.done-button span:nth-child(1),
+.done-button span:nth-child(3) {
+  width: 35px;
+  height: 4px;
+}
+.done-button:hover span:nth-child(1),
+.done-button:hover span:nth-child(3) {
+  transform: translateX(0);
+}
+.done-button span:nth-child(2),
+.done-button span:nth-child(4) {
+  width: 4px;
+  height: 35px;
+}
+.done-button:hover span:nth-child(1),
+.done-button:hover span:nth-child(3) {
+  transform: translateY(0);
+}
+.done-button span:nth-child(1) {
+  top: calc(50% - 2px);
+  left: -40px;
+  transform-origin: left;
+}
+.done-button:hover span:nth-child(1) {
+  left: 50%;
+}
+.done-button span:nth-child(3) {
+  top: calc(50% - 2px);
+  right: -40px;
+  transform-origin: right;
+}
+.done-button:hover span:nth-child(3) {
+  right: 50%;
+}
+.done-button span:nth-child(2) {
+  left: calc(50% - 2px);
+  top: -40px;
+  transform-origin: top;
+}
+.done-button:hover span:nth-child(2) {
+  top: 50%;
+}
+.done-button span:nth-child(4) {
+  left: calc(50% - 2px);
+  bottom: -40px;
+  transform-origin: bottom;
+}
+
+.done-button:hover span:nth-child(4) {
+  bottom: 50%;
+}
+@media screen and (max-width: 992px) {
+  .profile-contain {
+    width: 30rem;
+    height: 65vh;
+    gap: 1rem;
+  }
+  .done-button {
+    font-size: 18px;
+    padding: 10px 22px;
+  }
+  .done-button span:nth-child(2),
+  .done-button span:nth-child(4) {
+    width: 3px;
+    height: 30px;
+  }
+  .done-button span:nth-child(1),
+  .done-button span:nth-child(3) {
+    height: 3px;
+    width: 30px;
+  }
+  .done-button span:nth-child(1) {
+    top: calc(50% - 2px);
+    left: -35px;
+    transform-origin: left;
+  }
+  .done-button span:nth-child(2) {
+    left: calc(50% - 2px);
+    top: -35px;
+    transform-origin: top;
+  }
+  .done-button span:nth-child(3) {
+    top: calc(50% - 2px);
+    right: -35px;
+    transform-origin: right;
+  }
+  .done-button span:nth-child(4) {
+    left: calc(50% - 2px);
+    bottom: -35px;
+    transform-origin: bottom;
+  }
+  .search-bar {
+    font-size: 14px;
+    width: 9rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .profile-contain {
+    width: 25rem;
+    height: 58vh;
+    gap: 1rem;
+  }
+  .done-button {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+  .done-button span:nth-child(2),
+  .done-button span:nth-child(4) {
+    width: 3px;
+    height: 25px;
+  }
+  .done-button span:nth-child(1),
+  .done-button span:nth-child(3) {
+    height: 3px;
+    width: 25px;
+  }
+  .done-button span:nth-child(1) {
+    top: calc(50% - 2px);
+    left: -30px;
+    transform-origin: left;
+  }
+  .done-button span:nth-child(2) {
+    left: calc(50% - 2px);
+    top: -30px;
+    transform-origin: top;
+  }
+  .done-button span:nth-child(3) {
+    top: calc(50% - 2px);
+    right: -30px;
+    transform-origin: right;
+  }
+  .done-button span:nth-child(4) {
+    left: calc(50% - 2px);
+    bottom: -30px;
+    transform-origin: bottom;
+  }
+  .search-bar {
+    font-size: 10px;
+    width: 8rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .profile-contain {
+    width: 20rem;
+    height: 45vh;
+    gap: 0.75rem;
+  }
+  .done-button {
+    font-size: 10px;
+    padding: 5px 12px;
+  }
+  .done-button span:nth-child(2),
+  .done-button span:nth-child(4) {
+    width: 2px;
+    height: 18px;
+  }
+  .done-button span:nth-child(1),
+  .done-button span:nth-child(3) {
+    height: 2px;
+    width: 18px;
+  }
+  .done-button span:nth-child(1) {
+    top: calc(50% - 2px);
+    left: -20px;
+    transform-origin: left;
+  }
+  .done-button span:nth-child(2) {
+    left: calc(50% - 2px);
+    top: -20px;
+    transform-origin: top;
+  }
+  .done-button span:nth-child(3) {
+    top: calc(50% - 2px);
+    right: -20px;
+    transform-origin: right;
+  }
+  .done-button span:nth-child(4) {
+    left: calc(50% - 2px);
+    bottom: -20px;
+    transform-origin: bottom;
+  }
+  .search-bar {
+    font-size: 10px;
+    width: 7rem;
+  }
+}
